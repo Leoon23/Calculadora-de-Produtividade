@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Produtividade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">🌙 Modo Escuro</button>
+
+    <div class="container">
+        <div class="header">
+            <h1>⚡ Calculadora de Produtividade</h1>
+            <p>Ferramentas para otimizar seu dia</p>
+        </div>
+
+        <div class="tabs">
+            <button class="tab active" onclick="showTab('calculator')">🧮 Calculadora</button>
+            <button class="tab" onclick="showTab('pomodoro')">⏱️ Pomodoro</button>
+            <button class="tab" onclick="showTab('stats')">📊 Estatísticas</button>
+        </div>
+
+        <!-- CALCULADORA TAB -->
+        <div id="calculator" class="tab-content active">
+            <div class="calculator">
+                <input type="text" class="display" id="display" placeholder="0" readonly>
+                
+                <div class="buttons">
+                    <button class="btn clear" onclick="clearDisplay()">C</button>
+                    <button class="btn clear" onclick="clearEntry()">CE</button>
+                    <button class="btn operator" onclick="appendToDisplay('/')">/</button>
+                    <button class="btn operator" onclick="appendToDisplay('*')">×</button>
+                    
+                    <button class="btn number" onclick="appendToDisplay('7')">7</button>
+                    <button class="btn number" onclick="appendToDisplay('8')">8</button>
+                    <button class="btn number" onclick="appendToDisplay('9')">9</button>
+                    <button class="btn operator" onclick="appendToDisplay('-')">-</button>
+                    
+                    <button class="btn number" onclick="appendToDisplay('4')">4</button>
+                    <button class="btn number" onclick="appendToDisplay('5')">5</button>
+                    <button class="btn number" onclick="appendToDisplay('6')">6</button>
+                    <button class="btn operator" onclick="appendToDisplay('+')">+</button>
+                    
+                    <button class="btn number" onclick="appendToDisplay('1')">1</button>
+                    <button class="btn number" onclick="appendToDisplay('2')">2</button>
+                    <button class="btn number" onclick="appendToDisplay('3')">3</button>
+                    <button class="btn equals" onclick="calculate()" rowspan="2">=</button>
+                    
+                    <button class="btn number zero" onclick="appendToDisplay('0')">0</button>
+                    <button class="btn number" onclick="appendToDisplay('.')">.</button>
+                </div>
+
+                <div class="history">
+                    <h3>📝 Histórico</h3>
+                    <div id="history-list"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- POMODORO TAB -->
+        <div id="pomodoro" class="tab-content">
+            <div class="pomodoro">
+                <h2>🍅 Timer Pomodoro</h2>
+                <div class="timer-display" id="timer">25:00</div>
+                
+                <div class="timer-controls">
+                    <button class="control-btn start" onclick="startTimer()">▶️ Iniciar</button>
+                    <button class="control-btn pause" onclick="pauseTimer()">⏸️ Pausar</button>
+                    <button class="control-btn reset" onclick="resetTimer()">🔄 Reset</button>
+                </div>
+
+                <div class="sessions-counter">
+                    <p>Sessões completadas: <span id="sessions">0</span></p>
+                </div>
+
+                <div class="progress-section">
+                    <h3>Progresso da Sessão</h3>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress" style="width: 0%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ESTATÍSTICAS TAB -->
+        <div id="stats" class="tab-content">
+            <div class="stats">
+                <h2>📊 Suas Estatísticas</h2>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number" id="totalCalculations">0</div>
+                        <div class="stat-label">Cálculos Feitos</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="totalPomodoros">0</div>
+                        <div class="stat-label">Pomodoros</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="totalMinutes">0</div>
+                        <div class="stat-label">Minutos Focados</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="streak">0</div>
+                        <div class="stat-label">Dias Consecutivos</div>
+                    </div>
+                </div>
+
+                <div class="progress-section">
+                    <h3>Meta Semanal: 10 Pomodoros</h3>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="weeklyProgress" style="width: 0%"></div>
+                    </div>
+                    <p id="weeklyText">0/10 Pomodoros esta semana</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
