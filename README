@@ -1,171 +1,70 @@
-# 🧮 Calculadora de Produtividade
+# Calculadora de Produtividade
 
-> Sistema web completo para otimizar sua produtividade diária
+Sistema web que desenvolvi para combinar três ferramentas úteis no dia a dia: calculadora, timer pomodoro e controle de estatísticas.
 
-## 📋 Sobre o Projeto
+## Funcionalidades
 
-A **Calculadora de Produtividade** é uma aplicação web que combina três ferramentas essenciais em uma interface moderna e responsiva:
+### Calculadora
+- Operações matemáticas básicas
+- Histórico dos últimos cálculos
+- Funciona com teclado ou cliques
+- Limpa automaticamente em caso de erro
 
-- **🧮 Calculadora Avançada** - Operações matemáticas com histórico
-- **🍅 Timer Pomodoro** - Técnica de foco de 25 minutos
-- **📊 Estatísticas** - Acompanhe seu progresso e metas
+### Timer Pomodoro
+- Sessões de 25 minutos para foco
+- Controles de start, pause e reset
+- Contador de sessões completadas
+- Notificação quando termina
 
-## ✨ Principais Features
+### Estatísticas
+- Acompanha quantos cálculos fiz
+- Conta pomodoros completados
+- Calcula minutos de foco total
+- Mostra sequência de dias usando o app
 
-### 🧮 Calculadora
-- ✅ Operações básicas e avançadas
-- ✅ Histórico dos últimos 5 cálculos
-- ✅ Suporte completo a teclado
-- ✅ Tratamento de erros robusto
-- ✅ Interface intuitiva
+## Tecnologias
 
-### ⏱️ Timer Pomodoro
-- ✅ Sessões de 25 minutos de foco
-- ✅ Controles start/pause/reset
-- ✅ Contador de sessões completadas
-- ✅ Barra de progresso visual
-- ✅ Notificações de conclusão
+- HTML5 para estrutura
+- CSS3 com Grid e Flexbox
+- JavaScript ES6+ para lógica
+- LocalStorage para salvar dados
+- Design responsivo
 
-### 📊 Sistema de Estatísticas
-- ✅ Total de cálculos realizados
-- ✅ Pomodoros completados
-- ✅ Minutos de foco acumulados
-- ✅ Streak de dias consecutivos
-- ✅ Meta semanal com progresso
+## Como usar
 
-### 🎨 Interface Moderna
-- ✅ Design responsivo (mobile-first)
-- ✅ Tema claro e escuro
-- ✅ Animações suaves
-- ✅ Glassmorphism design
-- ✅ Gradientes modernos
+1. Abra o `index.html` no navegador
+2. Use as abas para navegar entre as ferramentas
+3. Seus dados ficam salvos automaticamente
+4. Tem modo escuro no botão superior direito
 
-## 🛠️ Tecnologias Utilizadas
+## Atalhos de teclado
 
-- **HTML5** - Estrutura semântica
-- **CSS3** - Estilos modernos (Grid, Flexbox, Animations)
-- **JavaScript ES6+** - Lógica da aplicação
-- **LocalStorage** - Persistência de dados
-- **Design Responsivo** - Mobile e desktop
+- Números e operadores funcionam normalmente
+- Enter ou = para calcular
+- Escape para limpar tudo
+- Backspace para apagar último número
 
-## 🚀 Como Usar
+## O que aprendi fazendo
 
-### 1. Clone ou baixe o projeto
-```bash
-git clone [seu-repositorio]
-cd calculadora-produtividade
-```
+- Como usar timers em JavaScript
+- Salvar dados no navegador com localStorage
+- Organizar código em funções separadas
+- Fazer interface que funciona no mobile
+- Criar temas claro e escuro
+- Trabalhar com múltiplas abas numa mesma página
 
-### 2. Abra no navegador
-Simplesmente abra o arquivo `index.html` em qualquer navegador moderno.
+## Desafios enfrentados
 
-### 3. Explore as funcionalidades
-- **Calculadora:** Use mouse ou teclado para calcular
-- **Pomodoro:** Clique em "Iniciar" para começar uma sessão de foco
-- **Estatísticas:** Acompanhe seu progresso ao longo do tempo
+- Fazer a calculadora não quebrar com divisão por zero
+- Sincronizar a barra de progresso do timer
+- Calcular o streak de dias consecutivos
+- Deixar tudo responsivo para celular
 
-## 🎯 Atalhos de Teclado (Calculadora)
 
-| Tecla | Função |
-|-------|--------|
-| `0-9` | Números |
-| `+` `-` `*` `/` | Operadores |
-| `Enter` ou `=` | Calcular resultado |
-| `Escape` | Limpar tudo |
-| `Backspace` | Apagar último dígito |
 
-## 📱 Design Responsivo
+## Melhorias futuras
 
-O projeto foi desenvolvido com abordagem **mobile-first** e se adapta perfeitamente a:
-
-- 📱 **Smartphones** (320px+)
-- 📱 **Tablets** (768px+)
-- 💻 **Desktops** (1024px+)
-- 🖥️ **Telas grandes** (1200px+)
-
-## 🎨 Temas
-
-### 🌞 Tema Claro
-- Gradiente azul/roxo de fundo
-- Cards claros e modernos
-- Ótimo para uso diurno
-
-### 🌙 Tema Escuro
-- Gradiente escuro elegante
-- Reduz cansaço visual
-- Ideal para uso noturno
-
-## 📊 Persistência de Dados
-
-Todos os dados são salvos automaticamente no navegador:
-
-- ✅ **Histórico de cálculos**
-- ✅ **Sessões de pomodoro completadas**
-- ✅ **Estatísticas de produtividade**
-- ✅ **Streak de dias consecutivos**
-- ✅ **Progresso semanal**
-
-## 🔧 Estrutura do Projeto
-
-```
-calculadora-produtividade/
-│
-├── index.html          # Estrutura HTML principal
-├── style.css           # Estilos e design responsivo
-├── script.js           # Lógica JavaScript
-└── README.md           # Documentação do projeto
-```
-
-## 💡 Funcionalidades Técnicas
-
-### JavaScript Avançado
-- Manipulação DOM otimizada
-- Timers e intervalos precisos
-- LocalStorage para persistência
-- Tratamento robusto de erros
-- Suporte a eventos de teclado
-
-### CSS Moderno
-- CSS Grid e Flexbox
-- Animações e transições
-- Variáveis CSS personalizadas
-- Mobile-first responsive design
-- Glassmorphism e gradientes
-
-## 🚀 Melhorias Futuras
-
-- [ ] Modo de calculadora científica
-- [ ] Diferentes durações de pomodoro (15/30/45 min)
-- [ ] Sons de notificação personalizados
-- [ ] Exportar estatísticas em PDF
-- [ ] Sincronização na nuvem
-- [ ] PWA (Progressive Web App)
-
-## 👨‍💻 Desenvolvedor
-
-**Leonardo Cardoso Silva**
-- 🌍 Parelhas-RN, Brasil
-- 📧 ygorleonardo200@gmail.com
-- 💼 [LinkedIn](https://www.linkedin.com/in/leonardosilva-cardoso)
-- 💻 [GitHub](https://github.com/Leoon23)
-
----
-
-## 📄 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
-
----
-
-## 🤝 Contribuições
-
-Contribuições são sempre bem-vindas! Sinta-se à vontade para:
-
-1. 🍴 Fazer um fork do projeto
-2. 🔧 Criar uma branch para sua feature
-3. 💡 Fazer suas modificações
-4. 📤 Enviar um pull request
-
----
-
-**⭐ Se este projeto te ajudou, considere dar uma estrela!**
+- Adicionar sons nas notificações
+- Fazer modo calculadora científica
+- Permitir personalizar tempo do pomodoro
+- Adicionar mais tipos de estatísticas
